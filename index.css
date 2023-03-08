@@ -1,0 +1,176 @@
+:root{
+
+    --brown:#a3b3cd;
+    }
+    body{ 
+    background:#b1c3dc;
+    justify-content: center;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .2s linear;
+    }
+    .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background:var(--brown);
+    color:rgb(0, 0, 0);
+    font-size:1.7rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border:0.1rem solid rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    }
+    .btn:hover{
+    background:#fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    }
+    .header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+    background: var(--brown);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+    }
+    .header .logo{
+    font-size:10rem;
+    font-weight: bolder;
+    color:#ffffff;
+    }
+    .header .logo i{
+    color:#222;
+    padding-right: .5rem;
+    }
+    .header .navbar a{
+    font-size: 2.5rem;
+    color: rgb(15, 21, 34);
+    margin: 0 1rem;
+
+    }
+    .header .navbar a:hover{
+    color:#6d7585;
+    }
+    .header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: #ffffff;
+
+    }
+    .header .icons div:hover{
+    color: #222;
+    }
+    table{
+        width: 50%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    tr {
+        border-bottom: 1px solid #cbcbcb;
+    }
+    th, td{
+        border: none;
+        height: 30px;
+        padding: 2px;
+    }
+    tr:hover {
+        background: #ece8db;
+    }
+    
+    form {
+        width: 45%;
+        margin: 150px auto;
+        text-align: left;
+        padding: 20px; 
+        border: 1px solid #bbbbbb; 
+        border-radius: 5px;
+        background-color: #a3b3cd;
+        color: rgb(0, 0, 0);
+    }
+    
+    .input-group1 {
+        margin: 10px 0px 10px 0px;
+    }
+    .input-group1 label {
+        display: block;
+        text-align: left;
+        margin: 3px;
+    }
+    .input-group1 input {
+        height: 50px;
+        width: 90%;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+    .input-group2 {
+        margin: 10px 0px 10px 0px;
+    }
+    .input-group2 label {
+        display: block;
+        text-align: left;
+        margin: 3px;
+    }
+    .input-group2 input {
+        height: 120px;
+        width: 90%;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        background: #f9f6f2;
+        border: none;
+        border-radius: 5px;
+    }
+    .edit_btn {
+        text-decoration: none;
+        padding: 2px 5px;
+        background: #2E8B57;
+        color: white;
+        border-radius: 3px;
+    }
+    
+    .del_btn {
+        text-decoration: none;
+        padding: 2px 5px;
+        color: white;
+        border-radius: 3px;
+        background: #800000;
+    }
+    .msg {
+        margin: 30px auto; 
+        padding: 10px; 
+        border-radius: 5px; 
+        color: #3c763d; 
+        background: #dff0d8; 
+        border: 1px solid #3c763d;
+        width: 50%;
+        text-align: center;
+    }
+    

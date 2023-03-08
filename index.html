@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travel homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+    :root{
+        --brown:#a3b3cd;
+    }
+    body{ 
+        background:#b1c3dc;
+        justify-content: center;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+    .btn{
+        margin-top: 1rem;
+        display: inline-block;
+        padding: .8rem 3rem;
+        background:var(--brown);
+        color:rgb(0, 0, 0);
+        font-size:1.7rem;
+        cursor: pointer;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+        border:0.1rem solid rgb(244, 244, 244);
+        font-family: 'Poppins', sans-serif;
+    }
+    .btn:hover{
+        background:#fff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    section{
+        padding:3rem 9%;
+    }
+    /*header css*/
+    .heading h1{
+        color: rgb(16, 22, 43);
+        font-size:20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .header{
+        font-family: 'Poppins', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index:1000;
+        background: var(--brown);
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:2rem 9%;
+        box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+    }
+    .header .logo{
+        font-size:10rem;
+        font-weight: bolder;
+        color:#ffffff;
+    }
+    .header .logo i{
+        color:#222;
+        padding-right: .5rem;
+    }
+    /*navigation bar*/
+    .header .navbar a{
+        font-size: 2.5rem;
+        color: rgb(248, 249, 251);
+        margin: 0 1rem;
+    }
+    .header .navbar a:hover{
+        color:#6d7585;
+    }
+    .header .icons div{
+        font-size: 2.5rem;
+        margin-left: 1.7rem;
+        cursor: pointer;
+        color: #fff;
+
+    }
+    .header .icons div:hover{
+        color: #222;
+    }
+
+    #menu-btn{
+        display: none;
+
+    }
+    /*text will pop out slowly when enter electron apps*/
+    @keyframes fadeLeft {
+        0%{
+
+        opacity: 0;
+        transform: translateY(-5rem);
+        }
+        }
+
+    @keyframes fadeUp {
+        0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    }
+    .home{
+        padding-top: 14rem;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        font-family: 'Poppins', sans-serif
+    } 
+    .home .slides-container .slide{
+
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        display:none;
+    }
+    .home .slides-container .slide.active{
+        display:flex;
+    }
+    .home .slides-container .slide .content{
+        flex: 1 1 40rem;
+        animation: fadeLeft .4s linear .4s backwards;
+    }
+    .home .slides-container .slide .content span{
+        color: #34363b;
+        font-size:2rem;
+    }
+    .home .slides-container .slide .content h3{
+        font-size:4.5rem;
+        color: #202031;
+        padding:.10rem 0;
+    }
+    .home .slides-container .slide .img{
+        flex: 1 1 40rem;
+        margin: 3rem 0;
+    }
+    .home .slides-container .slide .img img{
+        width: 100%;
+        animation: fadeUp .4s linear;
+    }
+    .home #next-slide,
+    .home #prev-slide{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        box-shadow: 0 0.5rem 1rem rgba(57, 60, 62, 0.7);
+        border:0.1rem solid rgba(129, 150, 200, 0.7);
+        text-align: center;
+        background: var(--purple);
+        font-size:2rem;
+        color: #353d55;
+        cursor: pointer;
+
+    }
+    .home #next-slide:hover,
+    .home #prev-slide:hover{
+        background:#222;
+        color: #fff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    .home #prev-slide{
+        left:2rem;
+    }
+    .home #next-slide{
+        right:2rem;
+    }
+    .box{
+        width: 100%;
+        height: auto;
+        background: #f9f6f2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif
+    }
+    .box h3{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 10px;
+        padding-left: 80px;
+    }
+    .boxing{
+        width: 140px;
+        height: 40px;
+        margin: 25px;
+        box-sizing: border-box;
+        font-size: 20px;
+        margin-top: 1rem;
+        display: inline-block;
+        padding: .8rem 3rem;
+        color:#fff;
+        cursor: pointer;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+        border:0.1rem solid rgba(0,0,0,0.7);
+        font-size:1.9rem;
+    }
+    .boxing:hover{
+        background: #222;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    
+</style>
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="temp.html">WEATHER</a>
+            <a href="meals.html">MEALS</a>
+            <a href="places.html">PLACES</a>
+        </nav>
+    </header>
+    <!--homepage-->
+    <section class="home" id="home">
+        <div class="slides-container">
+            <div class="slide active">
+                <div class="content">
+                    <h3>نهارك طيّب</h3>
+                    <h3>WELCOME TO TUNISIA</h3><br><br>
+                    <span>Your holiday will be perfect with us!</span><br><br>
+                    <span>What are we provided in our application:</span><br><br>
+                    <span>Find weather details of the city.</span><br>
+                    <span>Find meals of the city.</span><br>
+                    <span>Bst places you can go in the city.</span>
+                </div>
+                <div class="img">
+                    <img src="https://www.planetware.com/wpimages/2020/09/tunisia-top-attractions-el-djem-amphitheater.jpg" width="1000" height="430" alt="">
+                </div>
+            </div>
+    </section>
+</body>
+</html>

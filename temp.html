@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="meals.css">
+    <title>travel</title>
+    
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="temp.html">WEATHER</a>
+            <a href="meals.html">MEALS</a>
+            <a href="places.html">PLACES</a>
+        </nav>
+    </header>
+    <form>
+        <label for="city"><h1>Select A Tunisia City:</h1></label><br>
+        <select id="city" name="city">
+          <option value="">--Select City--</option>
+          <option value="Tunis">Tunis</option>
+          <option value="Kairouan">Kairouan</option>
+          <option value="Bizerte">Bizerte</option>
+          <option value="Gabes">Gabes</option>
+          <option value="Carthage">Carthage</option>
+          <!-- Add more options for other cities as needed -->
+        </select>
+        <button type="button" onclick="temperature()">Get Weather</button>
+      </form>
+      <div id="weather"></div>
+      <script src="temp.js"></script>
+
+</body>
+</html>

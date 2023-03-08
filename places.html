@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+    :root{
+
+    --brown:#a3b3cd;
+    }
+    body{ 
+    background:#b1c3dc;
+    justify-content: center;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .2s linear;
+    }
+    .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background:var(--brown);
+    color:rgb(0, 0, 0);
+    font-size:1.7rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border:0.1rem solid rgb(244, 244, 244);
+    font-family: 'Poppins', sans-serif;
+    }
+    .btn:hover{
+    background:#fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    }
+    section{
+    padding:3rem 9%;
+    }
+    .heading{
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEh9r07KJUI4tEdTXx8nBqCJL0yXUtEm20h8Dws4F75fMLH4qqoS1_o79M9d7VFzxYM3Q16O2mdZe8bOqyV0-3q7lri9R_INIYa6WIlW3R9OZ0uOqwx3yYxDf1ezXpO5LeCXt4nrmJfGHSLz_yelpdsWO6h6LaY4LoIlglQq4_BXyOVsNjnDrHjSIlyW=s5676") no-repeat;
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.7);
+    }
+    .heading h1{
+    color: rgb(16, 22, 43);
+    font-size:20px;
+    font-family: 'Poppins', sans-serif;
+    }
+    .header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+    background: var(--brown);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+    }
+    .header .logo{
+    font-size:10rem;
+    font-weight: bolder;
+    color:#ffffff;
+    }
+    .header .logo i{
+    color:#222;
+    padding-right: .5rem;
+    }
+    .header .navbar a{
+    font-size: 2.5rem;
+    color: rgb(248, 249, 251);
+    margin: 0 1rem;
+
+    }
+    .header .navbar a:hover{
+    color:#6d7585;
+    }
+    .header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+
+    }
+    .header .icons div:hover{
+    color: #222;
+    }
+
+    #menu-btn{
+    display: none;
+
+    }
+    @keyframes fadeLeft {
+    0%{
+
+    opacity: 0;
+    transform: translateY(-5rem);
+    }
+    }
+
+    @keyframes fadeUp {
+        0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    }
+    .home{
+        padding-top: 14rem;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        font-family: 'Poppins', sans-serif
+    } 
+    .home .slides-container .slide{
+
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        display:none;
+    }
+    .home .slides-container .slide.active{
+        display:flex;
+    }
+    .home .slides-container .slide .content{
+        flex: 1 1 40rem;
+        animation: fadeLeft .4s linear .4s backwards;
+    }
+    .home .slides-container .slide .content span{
+        color: #34363b;
+        font-size:2rem;
+    }
+    .home .slides-container .slide .content h3{
+        font-size:4.5rem;
+        color: #202031;
+        padding:.10rem 0;
+    }
+    .home .slides-container .slide .img{
+        flex: 1 1 40rem;
+        margin: 3rem 0;
+    }
+    .home .slides-container .slide .img img{
+        width: 100%;
+        animation: fadeUp .4s linear;
+    }
+    .home #next-slide,
+    .home #prev-slide{
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        box-shadow: 0 0.5rem 1rem rgba(57, 60, 62, 0.7);
+        border:0.1rem solid rgba(129, 150, 200, 0.7);
+        text-align: center;
+        background: var(--purple);
+        font-size:2rem;
+        color: #353d55;
+        cursor: pointer;
+
+    }
+    .home #next-slide:hover,
+    .home #prev-slide:hover{
+        background:#222;
+        color: #fff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    .home #prev-slide{
+        left:2rem;
+    }
+    .home #next-slide{
+        right:2rem;
+    }
+    .box{
+        width: 100%;
+        height: auto;
+        background: #f9f6f2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif
+    }
+    .box h3{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 10px;
+        padding-left: 80px;
+    }
+    .boxing{
+        width: 140px;
+        height: 40px;
+        margin: 25px;
+        box-sizing: border-box;
+        font-size: 20px;
+        margin-top: 1rem;
+        display: inline-block;
+        padding: .8rem 3rem;
+        color:#fff;
+        cursor: pointer;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+        border:0.1rem solid rgba(0,0,0,0.7);
+        font-size:1.9rem;
+    }
+    .boxing:hover{
+    background: #222;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    
+</style>
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="temp.html">WEATHER</a>
+            <a href="meals.html">MEALS</a>
+            <a href="places.html">PLACES</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="slides-container">
+
+            <div class="slide active">
+                <div class="content">
+                    <h3>PLACES TO VISIT IN TUNISIA</h3>
+                    <span>These are the top places to visit when you are on your holiday!</span>
+                </div>
+                <div class="img">
+                    <img src="https://www.planetware.com/photos-large/TUN/tunisia-kairouan-skyline-of-mosques.jpg" width="935" height="430" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Djerba</h3><br>
+                    <span>If you're looking for the picture-perfect beach escape, then the island of Djerba checks all the right boxes.<br><br>
+                        The island town of Houmt Souk is the main point of interest off the beach, with an old town district that is a muddle of whitewashed houses.<br><br>
+                        Houmt Souk's shopping is an attraction in itself, with plenty of handicraft vendors for browsing and haggling opportunities off the beach.<br></span>
+                        </div>
+                <div class="img">
+                    <img src="https://www.planetware.com/photos-large/TUN/tunisia-djerba-resort-beach.jpg" width="935" height="430" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Sidi Bou Said</h3><br>
+                    <span>Tunisia has no shortage of Roman ruins, but Bulla Regia near Tabarka is the country's most interesting and intriguing site.<br><br>
+                        Here, the Roman inhabitants coped with the harsh summer climate by ingeniously building their villas underground, which has left the city houses incredibly well preserved today.<br></span>
+                </div>
+                <div class="img">
+                    <img src="https://www.planetware.com/photos-large/TUN/tunisia-tunis-sidi-bou-said-whitewashed-house-view.jpg" width="935" height="430" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <h3>Bulla Regia</h3><br>
+                    <span>Impossibly cute, and amazingly photogenic, Sidi Bou Said is a clifftop village of petite dimensions that seem to have fallen off an artist's canvas.<br><br>
+                        Unsurprisingly, artists have feted this little hamlet, now a high-class suburb of the capital Tunis, for decades.<br><br>
+                        The whitewashed alleyways, wrought-iron window frames, and colorful blue doors are Tunisian village architecture at their finest, while the Mediterranean backdrop is the cherry on top.<br></span>
+                </div>
+                <div class="img">
+                    <img src="https://www.planetware.com/wpimages/2020/09/tunisia-top-attractions-bulla-regia.jpg" width="935" height="430" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+    </section>
+<script>
+    let slides = document.querySelectorAll('.home .slides-container .slide');
+    let index = 0;
+    function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+    }
+</script>
+</body>
+</html>
